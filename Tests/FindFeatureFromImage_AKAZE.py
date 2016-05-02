@@ -15,7 +15,7 @@ while(True):
 	print(len(akaze_kp))
 	printimg = cv2.drawKeypoints(capframe, akaze_kp, None, (255, 0, 0), 4)
 
-	cv2.imshow('SURF_detection', printimg)
+	cv2.imshow('AKAZE_detection', printimg)
 	if cv2.waitKey(1000) & 0xFF == ord('q'):
 		break
 

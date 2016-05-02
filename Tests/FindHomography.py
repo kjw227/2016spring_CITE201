@@ -3,8 +3,8 @@ import numpy as np
 
 min_count = 20
 
-img1 = cv2.imread("image/f1.jpg", 0)
-img2 = cv2.imread("image/f2.jpg", 0)
+img1 = cv2.imread("image/third1.jpg", 0)
+img2 = cv2.imread("image/123123.jpg", 0)
 
 finder = cv2.AKAZE_create()
 
