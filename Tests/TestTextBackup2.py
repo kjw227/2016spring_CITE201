@@ -9,12 +9,12 @@ if not cap.isOpened():
 	cap.open(0)
 
 while(True) :
-	ret, printimg = cap.read()
+	ret, frame = cap.read()
 	
 	akaze_detector = cv2.AKAZE_create()
-	akaze_kp, akaze_des = akaze_detector.detectAndCompute(printimg,None)
+	akaze_kp, akaze_des = akaze_detector.detectAndCompute(frame,None)
 	
-	printimg = cv2.drawKeypoints(printimg, akaze_kp, None, (255,0,0),4)
+	printimg = cv2.drawKeypoints(frame, akaze_kp, None, (255,0,0),4)
 	dis = 0.0
 
 	if(len(akaze_kp)>0):
